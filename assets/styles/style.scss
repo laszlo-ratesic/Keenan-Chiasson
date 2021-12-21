@@ -86,7 +86,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -101,21 +100,17 @@ nav,
 section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -123,7 +118,6 @@ q:after {
   content: "";
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -147,9 +141,8 @@ body {
   background-size: 1400% 1400%;
   color: white;
   -webkit-animation: gradient 45s ease infinite;
+  -moz-animation: gradient 45s ease infinite;
   animation: gradient 45s ease infinite;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -164,7 +157,17 @@ body {
     background-position: 0% 11%;
   }
 }
-
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 11%;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  100% {
+    background-position: 0% 11%;
+  }
+}
 @keyframes gradient {
   0% {
     background-position: 0% 11%;
@@ -177,14 +180,29 @@ body {
   }
 }
 
+// SKEWED TEXT
+// Copyright (c) 2021 by James Bosworth (https://codepen.io/bosworthco/pen/YWBLpR)
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 /*
 ** Change this if you need to modify
 ** the amount of lines displayed
 */
+$total-lines: 6;
+
 /*
 ** Leave these unless you want
 ** to open a whole can of worms
 */
+$left-offset: 29px;
+$clip-height: 50px;
+$line-height: $clip-height - 5px;
+
 /*
 ** Apply styles to the parent element
 */
@@ -196,7 +214,7 @@ body {
   font-weight: 900;
   letter-spacing: -2px;
   text-transform: uppercase;
-  -webkit-transform: translate3d(0, 0, 0);
+  // Sort out nasty text fuzz
   transform: translate3d(0, 0, 0);
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
@@ -207,59 +225,34 @@ body {
 ** Apply common styles to each line of text
 */
 .word-line {
-  height: 50px;
+  height: $clip-height;
   overflow: hidden;
   position: relative;
-}
 
-.word-line:nth-child(odd) {
-  -webkit-transform: skew(60deg, -30deg) scaleY(0.66667);
-  transform: skew(60deg, -30deg) scaleY(0.66667);
-}
+  // Change the perspective of each alternating line
+  &:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.66667);
+  }
+  &:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.33333);
+  }
 
-.word-line:nth-child(even) {
-  -webkit-transform: skew(0deg, -30deg) scaleY(1.33333);
-  transform: skew(0deg, -30deg) scaleY(1.33333);
-}
-
-.word-line:nth-child(1) {
-  left: 29px;
-}
-
-.word-line:nth-child(2) {
-  left: 58px;
-}
-
-.word-line:nth-child(3) {
-  left: 87px;
-}
-
-.word-line:nth-child(4) {
-  left: 116px;
-}
-
-.word-line:nth-child(5) {
-  left: 145px;
-}
-
-.word-line:nth-child(6) {
-  left: 174px;
-}
-
-.word-line:nth-child(7) {
-  left: 203px;
+  // Loop over the total lines and apply a left offset
+  @for $i from 1 through $total-lines + 1 {
+    &:nth-child(#{$i}) {
+      left: $left-offset * $i;
+    }
+  }
 }
 
 /*
 ** Fine-grained text styles
 */
 p {
-  height: 50px;
-  line-height: 45px;
+  height: $clip-height;
+  line-height: $line-height;
   padding: 0 10px;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   vertical-align: top;
   white-space: nowrap;
@@ -268,8 +261,8 @@ p {
 /*
 ** The hover interaction
 */
-.words:hover p {
-  -webkit-transform: translate3d(0, -50px, 0);
-  transform: translate3d(0, -50px, 0);
+.words:hover {
+  p {
+    transform: translate3d(0, -($clip-height), 0);
+  }
 }
-/*# sourceMappingURL=style.css.map */
