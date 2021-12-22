@@ -237,7 +237,7 @@ $line-height: $clip-height - 5px;
 /*
 ** Fine-grained text styles
 */
-p {
+.word-line p {
   height: $clip-height;
   line-height: $line-height;
   padding: 0 10px;
@@ -272,8 +272,8 @@ p {
 // WHO I AM SECTION
 .intro p {
   line-height: 1.7;
-  font-size: 20px;
-  width: 80%;
+  font-size: 26px;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
 }
