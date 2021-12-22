@@ -50,12 +50,14 @@ table {
 // END OF RESET
 
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
 // GRADIENT BACKGROUND
 
 body {
+  display: flex;
+  flex-wrap: wrap;
   background: linear-gradient(
     311deg,
     #ffd452,
@@ -109,10 +111,44 @@ body {
 }
 // END OF GRADIENT BACKGROUND
 
+// HEADER
+header {
+  padding: 20px 36px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+header h1 {
+  font-size: 36px;
+  max-width: 100%;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav {
+  width: 36%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 // AVATAR PICTURE
 .container {
   display: flex;
-  width: 100%;
+  min-width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
@@ -151,7 +187,6 @@ $line-height: $clip-height - 5px;
 
 .words {
   padding: 80px 0;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 68px;
   font-weight: 900;
   letter-spacing: -2px;
