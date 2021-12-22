@@ -149,7 +149,7 @@ header nav ul {
 .container {
   display: flex;
   min-width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row-reverse;
@@ -161,6 +161,7 @@ header nav ul {
   border-radius: 36px;
   filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
   order: 2;
+
 }
 
 .container svg:hover {
