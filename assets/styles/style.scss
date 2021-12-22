@@ -56,8 +56,6 @@ html {
 // GRADIENT BACKGROUND
 
 body {
-  display: flex;
-  flex-wrap: wrap;
   background: linear-gradient(
     311deg,
     #ffd452,
@@ -73,7 +71,6 @@ body {
   -webkit-animation: gradient 18s ease infinite;
   -moz-animation: gradient 18s ease infinite;
   animation: gradient 18s ease infinite;
-  display: flex;
 }
 
 @-webkit-keyframes gradient {
@@ -128,7 +125,7 @@ header {
 header h1 {
   font-size: 36px;
   max-width: 100%;
-  text-shadow: 0 0 5px rgba(black, 0.5)
+  text-shadow: 0 0 5px rgba(black, 0.5);
 }
 
 header a {
@@ -144,19 +141,22 @@ header nav ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
 }
 
 header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.36vw;
-  text-shadow: 0 0 5px rgba(black, 0.5)
+  text-shadow: 0 0 5px rgba(black, 0.5);
+  border-radius: 15px;
+  transition: 0.18s;
 }
 
 header nav ul li a:hover {
-  background: white;
+  background-color: white;
   color: black;
-  border-radius: 15px;
   text-shadow: none;
 }
 
@@ -176,15 +176,11 @@ header nav ul li a:hover {
   border-radius: 36px;
   filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
   order: 2;
-
 }
 
 .container svg:hover {
   filter: drop-shadow(10px 10px 10px yellow);
 }
-
-
-
 
 // SKEWED NAME TEXT
 
@@ -262,6 +258,26 @@ p {
 }
 
 // END OF SKEWED NAME TEXT
+
+// SECTION TITLE STYLES
+.section-title {
+  font-size: 48px;
+  border-bottom: 3px solid;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 336px auto 35px auto;
+  width: 50%;
+}
+
+// WHO I AM SECTION
+.intro p {
+  line-height: 1.7;
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 // UTILITIES
 
