@@ -205,6 +205,10 @@ p {
 /*
 ** The hover interaction
 */
+.words:hover {
+  color: black;
+}
+
 .words:hover p {
   -webkit-transform: translate3d(0, -50px, 0);
           transform: translate3d(0, -50px, 0);
