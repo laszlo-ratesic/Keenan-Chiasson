@@ -12,35 +12,57 @@
   <body>
     <header></header>
     <section class="hero"></section>
-    <ul class="words">
-      <li class="word-line">
-        <p>&nbsp;</p>
-        <p>Keenan</p>
-      </li>
-      <li class="word-line">
-        <p>Keenan</p>
-        <p>Chiasson</p>
-      </li>
-      <li class="word-line">
-        <p>Chiasson</p>
-        <p>&nbsp;</p>
-      </li>
-      <li class="word-line">
-        <p>&nbsp;</p>
-        <p>Full-stack</p>
-      </li>
-      <li class="word-line">
-        <p>Full-stack</p>
-        <p>Web</p>
-      </li>
-      <li class="word-line">
-        <p>Web</p>
-        <p>Developer</p>
-      </li>
-      <li class="word-line">
-        <p>Developer</p>
-        <p>&nbsp;</p>
-      </li>
-    </ul>
+    <div class="container">
+      <svg width="336" height="420" viewBox="0 0 336 420">
+        <filter id="purple-warm" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feColorMatrix type="matrix" values="1 0 0 0 0
+        1 0 0 0 0
+        1 0 0 0 0
+        0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+          <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.52 0.97 1"/>
+            <feFuncG type="table" tableValues="0 0.62 1"/>
+            <feFuncB type="table" tableValues="0.51 0.39 0.89"/>
+            <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+          <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <image
+          href="./assets/images/avatar.jpg"
+          alt="Head shot of Keenan Chiasson"
+          filter="url(#purple-warm)"
+        ></image>
+      </svg>
+      <ul class="words">
+        <li class="word-line">
+          <p>&nbsp;</p>
+          <p>Keenan</p>
+        </li>
+        <li class="word-line">
+          <p>Keenan</p>
+          <p>Chiasson</p>
+        </li>
+        <li class="word-line">
+          <p>Chiasson</p>
+          <p>&nbsp;</p>
+        </li>
+        <li class="word-line">
+          <p>&nbsp;</p>
+          <p>Full-stack</p>
+        </li>
+        <li class="word-line">
+          <p>Full-stack</p>
+          <p>Web</p>
+        </li>
+        <li class="word-line">
+          <p>Web</p>
+          <p>Developer</p>
+        </li>
+        <li class="word-line">
+          <p>Developer</p>
+          <p>&nbsp;</p>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

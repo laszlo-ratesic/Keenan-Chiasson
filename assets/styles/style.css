@@ -2,88 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -139,20 +58,11 @@ html {
 }
 
 body {
-  background: linear-gradient(
-    311deg,
-    #544a7d,
-    #ffd452,
-    #0575e6,
-    #00f260,
-    #1a2a6c,
-    #b21f1f,
-    #fdbb2d
-  );
+  background: linear-gradient(311deg, #ffd452, #544a7d, #0575e6, #00f260, #1a2a6c, #b21f1f, #fdbb2d);
   background-size: 1400% 1400%;
   color: white;
-  -webkit-animation: gradient 45s ease infinite;
-  animation: gradient 45s ease infinite;
+  -webkit-animation: gradient 18s ease infinite;
+  animation: gradient 18s ease infinite;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,19 +92,41 @@ body {
   }
 }
 
-/*
-** Change this if you need to modify
-** the amount of lines displayed
-*/
-/*
-** Leave these unless you want
-** to open a whole can of worms
-*/
-/*
-** Apply styles to the parent element
-*/
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.container svg {
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 36px;
+  -webkit-filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
+          filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.container svg:hover {
+  -webkit-filter: drop-shadow(10px 10px 10px yellow);
+          filter: drop-shadow(10px 10px 10px yellow);
+}
+
 .words {
-  margin: 0 auto;
   padding: 80px 0;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 68px;
@@ -202,7 +134,7 @@ body {
   letter-spacing: -2px;
   text-transform: uppercase;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
@@ -219,12 +151,12 @@ body {
 
 .word-line:nth-child(odd) {
   -webkit-transform: skew(60deg, -30deg) scaleY(0.66667);
-  transform: skew(60deg, -30deg) scaleY(0.66667);
+          transform: skew(60deg, -30deg) scaleY(0.66667);
 }
 
 .word-line:nth-child(even) {
   -webkit-transform: skew(0deg, -30deg) scaleY(1.33333);
-  transform: skew(0deg, -30deg) scaleY(1.33333);
+          transform: skew(0deg, -30deg) scaleY(1.33333);
 }
 
 .word-line:nth-child(1) {
@@ -265,7 +197,7 @@ p {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   vertical-align: top;
   white-space: nowrap;
 }
@@ -275,6 +207,6 @@ p {
 */
 .words:hover p {
   -webkit-transform: translate3d(0, -50px, 0);
-  transform: translate3d(0, -50px, 0);
+          transform: translate3d(0, -50px, 0);
 }
 /*# sourceMappingURL=style.css.map */

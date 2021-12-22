@@ -1,84 +1,9 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -122,16 +47,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+// END OF RESET
 
 html {
   font-family: "Montserrat", sans-serif;
 }
 
+// GRADIENT BACKGROUND
+
 body {
   background: linear-gradient(
     311deg,
-    #544a7d,
     #ffd452,
+    #544a7d,
     #0575e6,
     #00f260,
     #1a2a6c,
@@ -140,9 +68,9 @@ body {
   );
   background-size: 1400% 1400%;
   color: white;
-  -webkit-animation: gradient 45s ease infinite;
-  -moz-animation: gradient 45s ease infinite;
-  animation: gradient 45s ease infinite;
+  -webkit-animation: gradient 18s ease infinite;
+  -moz-animation: gradient 18s ease infinite;
+  animation: gradient 18s ease infinite;
   display: flex;
 }
 
@@ -179,8 +107,35 @@ body {
     background-position: 0% 11%;
   }
 }
+// END OF GRADIENT BACKGROUND
 
-// SKEWED TEXT
+// AVATAR PICTURE
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.container svg {
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 36px;
+  filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
+  order: 2;
+}
+
+.container svg:hover {
+  filter: drop-shadow(10px 10px 10px yellow);
+}
+
+
+
+
+// SKEWED NAME TEXT
+
 // Copyright (c) 2021 by James Bosworth (https://codepen.io/bosworthco/pen/YWBLpR)
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -189,25 +144,12 @@ body {
 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-/*
-** Change this if you need to modify
-** the amount of lines displayed
-*/
 $total-lines: 6;
-
-/*
-** Leave these unless you want
-** to open a whole can of worms
-*/
 $left-offset: 29px;
 $clip-height: 50px;
 $line-height: $clip-height - 5px;
 
-/*
-** Apply styles to the parent element
-*/
 .words {
-  margin: 0 auto;
   padding: 80px 0;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 68px;
@@ -266,3 +208,5 @@ p {
     transform: translate3d(0, -($clip-height), 0);
   }
 }
+
+// END OF SKEWED NAME TEXT
