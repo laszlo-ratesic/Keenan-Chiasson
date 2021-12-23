@@ -129,7 +129,6 @@ body {
 header {
   padding: 20px 36px;
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -165,7 +164,7 @@ header nav ul {
 header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
-  font-size: 1.36vw;
+  font-size: 4.36vh;
   text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
   border-radius: 15px;
   transition: 0.18s;
@@ -179,39 +178,16 @@ header nav ul li a:hover {
 
 // AVATAR PICTURE
 .container {
-  display: flex;
+  margin: 50vh auto;
   min-width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   align-items: center;
-  flex-direction: row-reverse;
+  position: relative;
+  right: 200px;
 }
 
-.container svg {
-  max-width: 100%;
-  min-width: 100px;
-  border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
-  filter: brightness(100%) saturate(100%)
-    opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
-  transition: 880ms filter;
-  order: 2;
-  animation: wobble 15s ease-in-out alternate infinite;
-}
-
-.container svg:hover,
-.container svg:active {
-  filter: none;
-  animation: wobble 5s ease-in-out alternate infinite;
-}
-
-@keyframes wobble {
-  50% {
-    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
-  }
-  100% {
-    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
-  }
-}
 
 // SKEWED NAME TEXT
 
@@ -296,7 +272,7 @@ $line-height: $clip-height - 5px;
   border-bottom: 3px solid;
   padding-bottom: 20px;
   text-align: center;
-  margin: 336px auto 35px auto;
+  margin: 36px auto;
   width: 50%;
 }
 
@@ -305,8 +281,39 @@ $line-height: $clip-height - 5px;
   line-height: 1.7;
   font-size: 26px;
   width: 50%;
-  margin: 0 auto;
-  text-align: center;
+  margin: 0;
+  text-align: right;
+}
+
+.intro div {
+  position: relative;
+}
+
+.intro div svg {
+  margin: 20px 0 20px 150px;
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
+  filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%)
+    drop-shadow(15px -15px 0);
+  transition: 880ms filter;
+  animation: wobble 15s ease-in-out alternate infinite;
+  shape-outside: border-box;
+}
+
+.intro div svg:hover,
+.intro div svg:active {
+  filter: none;
+  animation: wobble 5s ease-in-out alternate infinite;
+}
+
+@keyframes wobble {
+  50% {
+    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
+  }
+  100% {
+    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
+  }
 }
 
 // WHAT I DO SECTION
@@ -327,7 +334,7 @@ $line-height: $clip-height - 5px;
 }
 
 .card {
-  background: rgba(#6980c0, .5);
+  background: rgba(#6980c0, 0.5);
   background-size: 800%;
   padding: 12px;
   border: 2px solid black;
@@ -375,7 +382,8 @@ $line-height: $clip-height - 5px;
   margin-left: -4rem;
 }
 
-.card:hover, .card:active {
+.card:hover,
+.card:active {
   transform: translateY(-7rem);
   background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
   animation: gradient 3s ease alternate infinite;
@@ -400,4 +408,81 @@ $line-height: $clip-height - 5px;
 
 .flex-row {
   display: flex;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: sticky;
+    position: -webkit-sticky;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  footer h2,
+  footer div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .words {
+    width: 60%;
+  }
+
+  .intro div {
+    justify-content: space-evenly;
+  }
+
+  .intro div svg {
+    margin: 2vh auto;
+  }
+
+  .section-title {
+    width: 80%;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  header nav{
+    width: 100%;
+  }
+
+  header nav ul li a {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  header h1 {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
 }
