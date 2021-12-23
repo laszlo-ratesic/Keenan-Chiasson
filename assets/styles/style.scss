@@ -110,15 +110,14 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: gradient 24s ease-in-out alternate infinite;
+  animation: gradient 24s ease-in-out infinite;
 }
 
 .container-image {
-  background-image: var(--primary-gradient);
   background-size: 1400% 1400%;
   background-position: center;
   background-attachment: fixed;
-  animation: gradient 24s ease-in-out alternate infinite;
+  animation: gradient 24s ease-in-out infinite;
   top: 100vh;
 }
 
