@@ -281,7 +281,7 @@ $line-height: $clip-height - 5px;
   line-height: 1.7;
   font-size: 26px;
   width: 50%;
-  margin: 0 auto;
+  margin: 0;
   text-align: right;
 }
 
@@ -298,7 +298,7 @@ $line-height: $clip-height - 5px;
     drop-shadow(15px -15px 0);
   transition: 880ms filter;
   animation: wobble 15s ease-in-out alternate infinite;
-  shape-outside: circle(50%);
+  shape-outside: border-box;
 }
 
 .intro div svg:hover,
@@ -408,4 +408,81 @@ $line-height: $clip-height - 5px;
 
 .flex-row {
   display: flex;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: sticky;
+    position: -webkit-sticky;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  footer h2,
+  footer div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .words {
+    width: 60%;
+  }
+
+  .intro div {
+    justify-content: space-evenly;
+  }
+
+  .intro div svg {
+    margin: 2vh auto;
+  }
+
+  .section-title {
+    width: 80%;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  header nav{
+    width: 100%;
+  }
+
+  header nav ul li a {
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  header h1 {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
 }
