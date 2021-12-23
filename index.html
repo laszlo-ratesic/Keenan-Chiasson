@@ -13,21 +13,19 @@
   <body>
     <!-- INTRODUCTION -->
     <div class="cover">
-
       <!-- First Container -->
       <div class="cover-container container-solid">
         <div class="title-wrapper">
-          <h1>Hello, World.</h1>
+          <h1>Great minds</h1>
         </div>
       </div>
 
       <!-- Second Container -->
       <div class="cover-container container-image" aria-hidden="true">
         <div class="title-wrapper">
-          <h1>Hello, World.</h1>
+          <h1>think alike</h1>
         </div>
       </div>
-
     </div>
 
     <!-- HEADER -->
@@ -53,49 +51,7 @@
     </header>
 
     <!-- HERO/JUMBOTRON -->
-
-    <!-- AVATAR PHOTO -->
     <div class="container">
-      <svg width="336" height="420" viewBox="0 0 336 420">
-        <filter
-          id="purple-sepia"
-          x="-10%"
-          y="-10%"
-          width="120%"
-          height="120%"
-          filterUnits="objectBoundingBox"
-          primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feColorMatrix
-            type="matrix"
-            values=".33 .33 .33 0 0
-                    .33 .33 .33 0 0
-                    .33 .33 .33 0 0
-                    0 0 0 1 0"
-            in="SourceGraphic"
-            result="colormatrix"
-          />
-          <feComponentTransfer in="colormatrix" result="componentTransfer">
-            <feFuncR type="table" tableValues="0.43 0.97" />
-            <feFuncG type="table" tableValues="0.06 0.88" />
-            <feFuncB type="table" tableValues="0.37 0.79" />
-            <feFuncA type="table" tableValues="0 1" />
-          </feComponentTransfer>
-          <feBlend
-            mode="overlay"
-            in="componentTransfer"
-            in2="SourceGraphic"
-            result="blend"
-          />
-        </filter>
-        <image
-          href="./assets/images/avatar.jpg"
-          alt="Head shot of Keenan Chiasson"
-          filter="url(#purple-sepia)"
-        ></image>
-      </svg>
-
       <!-- SKEWED NAME TEXT -->
       <ul class="words">
         <li class="word-line">
@@ -136,6 +92,47 @@
         <h2 class="section-title">// who i am</h2>
       </div>
       <div class="flex-row">
+        <!-- AVATAR PHOTO -->
+        <svg width="336" height="420" viewBox="0 0 336 420">
+          <filter
+            id="purple-sepia"
+            x="-10%"
+            y="-10%"
+            width="120%"
+            height="120%"
+            filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feColorMatrix
+              type="matrix"
+              values=".33 .33 .33 0 0
+                      .33 .33 .33 0 0
+                      .33 .33 .33 0 0
+                      0 0 0 1 0"
+              in="SourceGraphic"
+              result="colormatrix"
+            />
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+              <feFuncR type="table" tableValues="0.43 0.97" />
+              <feFuncG type="table" tableValues="0.06 0.88" />
+              <feFuncB type="table" tableValues="0.37 0.79" />
+              <feFuncA type="table" tableValues="0 1" />
+            </feComponentTransfer>
+            <feBlend
+              mode="overlay"
+              in="componentTransfer"
+              in2="SourceGraphic"
+              result="blend"
+            />
+          </filter>
+          <image
+            href="./assets/images/avatar.jpg"
+            alt="Head shot of Keenan Chiasson"
+            filter="url(#purple-sepia)"
+          ></image>
+        </svg>
+
         <p>
           welcome to the inside of my mind. Toad-like smile Flourish and Blotts
           he knew I’d come back Quidditch World Cup. Fat Lady baubles banana
@@ -158,11 +155,13 @@
       <!-- APP CARDS -->
       <div class="card-wrapper">
         <div class="cards">
-
           <!-- CARD 1 -->
           <div class="card">
             <div class="app-picture">
-              <a target="_blank" href="https://laszlo-ratesic.github.io/horiseon-marketing-agency/">
+              <a
+                target="_blank"
+                href="https://laszlo-ratesic.github.io/horiseon-marketing-agency/"
+              >
                 <img src="./assets/images/horiseon.png" />
               </a>
             </div>
@@ -175,7 +174,10 @@
           <!-- CARD 2 -->
           <div class="card">
             <div class="app-picture">
-              <a target="_blank" href="https://laszlo-ratesic.github.io/run-buddy/">
+              <a
+                target="_blank"
+                href="https://laszlo-ratesic.github.io/run-buddy/"
+              >
                 <img src="./assets/images/run-buddy.png" />
               </a>
             </div>

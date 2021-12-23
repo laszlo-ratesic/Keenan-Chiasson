@@ -102,7 +102,6 @@ body {
 }
 
 .container-image {
-  background-image: var(--primary-gradient);
   background-size: 1400% 1400%;
   background-position: center;
   background-attachment: fixed;
@@ -120,7 +119,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -167,7 +165,7 @@ header nav ul {
 header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
-  font-size: 1.36vw;
+  font-size: 4.36vh;
   text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
   border-radius: 15px;
   -webkit-transition: 0.18s;
@@ -181,65 +179,23 @@ header nav ul li a:hover {
 }
 
 .container {
+  margin: 50vh auto;
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.container svg {
-  max-width: 100%;
-  min-width: 100px;
-  border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
-  -webkit-filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
-          filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
-  -webkit-transition: 880ms -webkit-filter;
-  transition: 880ms -webkit-filter;
-  transition: 880ms filter;
-  transition: 880ms filter, 880ms -webkit-filter;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  -webkit-animation: wobble 15s ease-in-out alternate infinite;
-          animation: wobble 15s ease-in-out alternate infinite;
-}
-
-.container svg:hover,
-.container svg:active {
-  -webkit-filter: none;
-          filter: none;
-  -webkit-animation: wobble 5s ease-in-out alternate infinite;
-          animation: wobble 5s ease-in-out alternate infinite;
-}
-
-@-webkit-keyframes wobble {
-  50% {
-    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
-  }
-  100% {
-    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
-  }
-}
-
-@keyframes wobble {
-  50% {
-    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
-  }
-  100% {
-    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
-  }
+  position: relative;
+  right: 200px;
 }
 
 .words {
@@ -334,7 +290,7 @@ header nav ul li a:hover {
   border-bottom: 3px solid;
   padding-bottom: 20px;
   text-align: center;
-  margin: 336px auto 35px auto;
+  margin: 36px auto;
   width: 50%;
 }
 
@@ -343,7 +299,53 @@ header nav ul li a:hover {
   font-size: 26px;
   width: 50%;
   margin: 0 auto;
-  text-align: center;
+  text-align: right;
+}
+
+.intro div {
+  position: relative;
+}
+
+.intro div svg {
+  margin: 20px 0 20px 150px;
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
+  -webkit-filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
+          filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
+  -webkit-transition: 880ms -webkit-filter;
+  transition: 880ms -webkit-filter;
+  transition: 880ms filter;
+  transition: 880ms filter, 880ms -webkit-filter;
+  -webkit-animation: wobble 15s ease-in-out alternate infinite;
+          animation: wobble 15s ease-in-out alternate infinite;
+  shape-outside: circle(50%);
+}
+
+.intro div svg:hover,
+.intro div svg:active {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-animation: wobble 5s ease-in-out alternate infinite;
+          animation: wobble 5s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes wobble {
+  50% {
+    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
+  }
+  100% {
+    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
+  }
+}
+
+@keyframes wobble {
+  50% {
+    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
+  }
+  100% {
+    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
+  }
 }
 
 .card-wrapper {
@@ -424,7 +426,8 @@ header nav ul li a:hover {
   margin-left: -4rem;
 }
 
-.card:hover, .card:active {
+.card:hover,
+.card:active {
   -webkit-transform: translateY(-7rem);
           transform: translateY(-7rem);
   background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
