@@ -132,14 +132,14 @@ header nav ul li a:hover {
 .container svg {
   max-width: 100%;
   min-width: 100px;
-  border-radius: 36px;
-  filter: drop-shadow(10px 10px 10px var(--secondary-color)) brightness(105%)
-    opacity(75%);
+  border-radius: 999px;
+  filter: brightness(100%) saturate(100%)
+    opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
   order: 2;
 }
 
 .container svg:hover {
-  filter: drop-shadow(10px 10px 10px yellow);
+  filter: drop-shadow(45px -45px 0px)
 }
 
 // SKEWED NAME TEXT

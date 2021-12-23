@@ -8,60 +8,6 @@
   --secondary-color: white;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 html {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
@@ -185,17 +131,17 @@ header nav ul li a:hover {
 .container svg {
   max-width: 100%;
   min-width: 100px;
-  border-radius: 36px;
-  -webkit-filter: drop-shadow(10px 10px 10px var(--secondary-color)) brightness(105%) opacity(75%);
-          filter: drop-shadow(10px 10px 10px var(--secondary-color)) brightness(105%) opacity(75%);
+  border-radius: 999px;
+  -webkit-filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
+          filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
 .container svg:hover {
-  -webkit-filter: drop-shadow(10px 10px 10px yellow);
-          filter: drop-shadow(10px 10px 10px yellow);
+  -webkit-filter: drop-shadow(45px -45px 0px);
+          filter: drop-shadow(45px -45px 0px);
 }
 
 .words {
