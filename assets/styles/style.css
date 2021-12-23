@@ -131,17 +131,44 @@ header nav ul li a:hover {
 .container svg {
   max-width: 100%;
   min-width: 100px;
-  border-radius: 999px;
+  border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
   -webkit-filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
           filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
+  -webkit-transition: 880ms -webkit-filter;
+  transition: 880ms -webkit-filter;
+  transition: 880ms filter;
+  transition: 880ms filter, 880ms -webkit-filter;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  -webkit-animation: wobble 15s ease-in-out alternate infinite;
+          animation: wobble 15s ease-in-out alternate infinite;
 }
 
-.container svg:hover {
-  -webkit-filter: drop-shadow(45px -45px 0px);
-          filter: drop-shadow(45px -45px 0px);
+.container svg:hover,
+.container svg:active {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-animation: wobble 5s ease-in-out alternate infinite;
+          animation: wobble 5s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes wobble {
+  50% {
+    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
+  }
+  100% {
+    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
+  }
+}
+
+@keyframes wobble {
+  50% {
+    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
+  }
+  100% {
+    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
+  }
 }
 
 .words {

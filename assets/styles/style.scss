@@ -132,14 +132,27 @@ header nav ul li a:hover {
 .container svg {
   max-width: 100%;
   min-width: 100px;
-  border-radius: 999px;
+  border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
   filter: brightness(100%) saturate(100%)
     opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
+  transition: 880ms filter;
   order: 2;
+  animation: wobble 15s ease-in-out alternate infinite;
 }
 
-.container svg:hover {
-  filter: drop-shadow(45px -45px 0px)
+.container svg:hover,
+.container svg:active {
+  filter: none;
+  animation: wobble 5s ease-in-out alternate infinite;
+}
+
+@keyframes wobble {
+  50% {
+    border-radius: 56% 44% 62% 38% / 37% 57% 43% 63%;
+  }
+  100% {
+    border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
+  }
 }
 
 // SKEWED NAME TEXT
