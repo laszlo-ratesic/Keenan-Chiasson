@@ -1,3 +1,13 @@
+:root[theme="light"] {
+  --primary-color: white;
+  --secondary-color: black;
+}
+
+:root[theme="dark"] {
+  --primary-color: black;
+  --secondary-color: white;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -66,7 +76,7 @@ body {
     #fdbb2d
   );
   background-size: 1400% 1400%;
-  color: white;
+  color: var(--primary-color);
   -webkit-animation: gradient 18s ease infinite;
   -moz-animation: gradient 18s ease infinite;
   animation: gradient 18s ease infinite;
@@ -124,12 +134,12 @@ header {
 header h1 {
   font-size: 36px;
   max-width: 100%;
-  text-shadow: 0 0 5px rgba(black, 0.5);
+  text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-color);
 }
 
 header nav {
@@ -148,14 +158,14 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.36vw;
-  text-shadow: 0 0 5px rgba(black, 0.5);
+  text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
   border-radius: 15px;
   transition: 0.18s;
 }
 
 header nav ul li a:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-shadow: none;
 }
 
@@ -173,7 +183,7 @@ header nav ul li a:hover {
   max-width: 100%;
   min-width: 100px;
   border-radius: 36px;
-  filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
+  filter: drop-shadow(10px 10px 10px var(--secondary-color)) brightness(105%) opacity(75%);
   order: 2;
 }
 
@@ -253,7 +263,7 @@ $line-height: $clip-height - 5px;
   p {
     transform: translate3d(0, -($clip-height), 0);
   }
-  color: black;
+  color: var(--secondary-color);
 }
 
 // END OF SKEWED NAME TEXT
@@ -296,10 +306,10 @@ $line-height: $clip-height - 5px;
 }
 
 .card {
-  background: black;
+  background: var(--secondary-color);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 4px 4px 15px 2px rgba(white, 0.7);
+  box-shadow: 4px 4px 15px 2px rgba(var(--primary-color), 0.7);
   transition: 0.2s;
 }
 

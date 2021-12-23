@@ -1,3 +1,13 @@
+:root[theme="light"] {
+  --primary-color: white;
+  --secondary-color: black;
+}
+
+:root[theme="dark"] {
+  --primary-color: black;
+  --secondary-color: white;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -59,7 +69,7 @@ html {
 body {
   background: linear-gradient(311deg, #ffd452, #544a7d, #0575e6, #00f260, #1a2a6c, #b21f1f, #fdbb2d);
   background-size: 1400% 1400%;
-  color: white;
+  color: var(--primary-color);
   -webkit-animation: gradient 18s ease infinite;
   animation: gradient 18s ease infinite;
 }
@@ -110,12 +120,12 @@ header {
 header h1 {
   font-size: 36px;
   max-width: 100%;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-color);
 }
 
 header nav {
@@ -141,15 +151,15 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.36vw;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
   border-radius: 15px;
   -webkit-transition: 0.18s;
   transition: 0.18s;
 }
 
 header nav ul li a:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-shadow: none;
 }
 
@@ -176,8 +186,8 @@ header nav ul li a:hover {
   max-width: 100%;
   min-width: 100px;
   border-radius: 36px;
-  -webkit-filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
-          filter: drop-shadow(10px 10px 10px black) brightness(105%) opacity(75%);
+  -webkit-filter: drop-shadow(10px 10px 10px var(--secondary-color)) brightness(105%) opacity(75%);
+          filter: drop-shadow(10px 10px 10px var(--secondary-color)) brightness(105%) opacity(75%);
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -267,7 +277,7 @@ header nav ul li a:hover {
 ** The hover interaction
 */
 .words:hover {
-  color: black;
+  color: var(--secondary-color);
 }
 
 .words:hover p {
@@ -315,11 +325,11 @@ header nav ul li a:hover {
 }
 
 .card {
-  background: black;
+  background: var(--secondary-color);
   padding: 2rem;
   border-radius: 1rem;
-  -webkit-box-shadow: 4px 4px 15px 2px rgba(255, 255, 255, 0.7);
-          box-shadow: 4px 4px 15px 2px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 4px 4px 15px 2px rgba(var(--primary-color), 0.7);
+          box-shadow: 4px 4px 15px 2px rgba(var(--primary-color), 0.7);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
