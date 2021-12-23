@@ -301,14 +301,14 @@ header nav ul li a:hover {
   position: relative;
   height: 550px;
   width: 400px;
-  left: -420px;
+  left: -320px;
 }
 
 .card {
   background: rgba(105, 128, 192, 0.5);
   background-size: 800%;
   padding: 12px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 30px;
   -webkit-box-shadow: 4px 4px 15px 2px rgba(var(--primary-color), 0.7);
           box-shadow: 4px 4px 15px 2px rgba(var(--primary-color), 0.7);
@@ -321,6 +321,8 @@ header nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: skewY(-15deg);
+          transform: skewY(-15deg);
 }
 
 .app-picture {
@@ -331,7 +333,7 @@ header nav ul li a:hover {
 .app-picture img {
   height: 100%;
   border-radius: 20px 20px 10px 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   opacity: 1;
 }
 
@@ -340,23 +342,49 @@ header nav ul li a:hover {
           margin-block-start: 0.83em;
   -webkit-margin-after: 0.83em;
           margin-block-end: 0.83em;
+  padding: 0px 30px;
+  max-height: 25px;
+}
+
+.card p {
+  padding: 20px 30px;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
 }
 
 .card:not(:first-child) {
   margin-left: -4rem;
 }
 
-.card:hover {
-  -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
+.card:hover, .card:active {
+  -webkit-transform: translateY(-7rem);
+          transform: translateY(-7rem);
   background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
   -webkit-animation: gradient 3s ease alternate infinite;
           animation: gradient 3s ease alternate infinite;
 }
 
 .card:hover ~ .card {
-  -webkit-transform: translateX(4rem);
-          transform: translateX(4rem);
+  -webkit-transform: skewY(-15deg) translateX(4rem);
+          transform: skewY(-15deg) translateX(4rem);
+}
+
+.shape_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f0f7ff;
+  width: 400px;
+  height: 550px;
+  border-radius: 30px;
+  z-index: -10;
 }
 
 .flex-row {
