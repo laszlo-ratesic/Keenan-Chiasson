@@ -295,8 +295,8 @@ $line-height: $clip-height - 5px;
   line-height: 1.7;
   font-size: 26px;
   width: 50%;
-  margin: 0;
-  text-align: right;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .intro div {
@@ -310,7 +310,7 @@ $line-height: $clip-height - 5px;
   border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
   filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%)
     drop-shadow(15px -15px 0);
-  transition: 880ms filter;
+  transition: 1080ms all;
   animation: wobble 15s ease-in-out alternate infinite;
   shape-outside: border-box;
 }
@@ -319,6 +319,7 @@ $line-height: $clip-height - 5px;
 .intro div svg:active {
   filter: none;
   animation: wobble 5s ease-in-out alternate infinite;
+  width: 336px;
 }
 
 @keyframes wobble {
@@ -434,9 +435,7 @@ $line-height: $clip-height - 5px;
   }
 
   header h1 {
-    width: 24%;
-    text-align: center;
-    margin-bottom: 10px;
+    display: none;
   }
 
   header nav {
@@ -468,6 +467,12 @@ $line-height: $clip-height - 5px;
 
   .intro div svg {
     margin: 2vh auto;
+    width: 336px;
+    height: 230px;
+  }
+
+  .intro div svg:hover {
+    height: 336px;
   }
 
   .section-title {
@@ -477,12 +482,26 @@ $line-height: $clip-height - 5px;
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
+  header h1 {
+    display: none;
+  }
+
   header nav{
     width: 100%;
   }
 
   header nav ul li a {
     width: 100%;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro div svg {
+    width: 100%;
+    width: 336px;
   }
 }
 

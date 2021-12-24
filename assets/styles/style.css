@@ -313,8 +313,8 @@ header nav ul li a:hover {
   line-height: 1.7;
   font-size: 26px;
   width: 50%;
-  margin: 0;
-  text-align: right;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .intro div {
@@ -328,10 +328,8 @@ header nav ul li a:hover {
   border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
   -webkit-filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
           filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%) drop-shadow(15px -15px 0);
-  -webkit-transition: 880ms -webkit-filter;
-  transition: 880ms -webkit-filter;
-  transition: 880ms filter;
-  transition: 880ms filter, 880ms -webkit-filter;
+  -webkit-transition: 1080ms all;
+  transition: 1080ms all;
   -webkit-animation: wobble 15s ease-in-out alternate infinite;
           animation: wobble 15s ease-in-out alternate infinite;
   shape-outside: border-box;
@@ -343,6 +341,7 @@ header nav ul li a:hover {
           filter: none;
   -webkit-animation: wobble 5s ease-in-out alternate infinite;
           animation: wobble 5s ease-in-out alternate infinite;
+  width: 336px;
 }
 
 @-webkit-keyframes wobble {
@@ -483,9 +482,7 @@ header nav ul li a:hover {
     position: -webkit-sticky;
   }
   header h1 {
-    width: 24%;
-    text-align: center;
-    margin-bottom: 10px;
+    display: none;
   }
   header nav {
     width: 100%;
@@ -513,6 +510,11 @@ header nav ul li a:hover {
   }
   .intro div svg {
     margin: 2vh auto;
+    width: 336px;
+    height: 230px;
+  }
+  .intro div svg:hover {
+    height: 336px;
   }
   .section-title {
     width: 80%;
@@ -521,11 +523,27 @@ header nav ul li a:hover {
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
+  header h1 {
+    display: none;
+  }
   header nav {
     width: 100%;
   }
   header nav ul li a {
     width: 100%;
+  }
+  .intro-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .intro div svg {
+    width: 100%;
+    width: 336px;
   }
 }
 
