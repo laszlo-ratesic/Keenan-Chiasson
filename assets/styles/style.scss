@@ -342,9 +342,9 @@ $line-height: $clip-height - 5px;
 .cards {
   display: flex;
   position: relative;
-  height: 550px;
+  height: 450px;
   width: 400px;
-  left: -320px;
+  left: -220px;
 }
 
 .card {
@@ -501,6 +501,41 @@ $line-height: $clip-height - 5px;
   .intro div svg {
     width: 100%;
     width: 336px;
+  }
+
+  .card-wrapper {
+    height: 70vh;
+  }
+
+  .cards {
+    flex-direction: column;
+    left: 0px;
+  }
+
+  .card {
+    transform: skewY(0deg);
+  }
+
+  .card:not(:first-child) {
+    margin-top: -6rem;
+  }
+
+  .card:hover,
+  .card:active {
+    transform: rotate(-3deg) translateX(-3rem) translateY(-3rem);
+  }
+
+  .card:hover ~ .card {
+    transform: rotate(-3deg) translateY(4rem);
+  }
+
+  .app-picture {
+    clip: rect(0, 100px, 200px, 0);
+  }
+
+  .app-picture img {
+    height: 100%;
+    content: url(../images/horiseon-mobile.png);
   }
 }
 

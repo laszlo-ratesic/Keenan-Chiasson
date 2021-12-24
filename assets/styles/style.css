@@ -375,9 +375,9 @@ header nav ul li a:hover {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  height: 550px;
+  height: 450px;
   width: 400px;
-  left: -320px;
+  left: -220px;
 }
 
 .card {
@@ -543,6 +543,39 @@ header nav ul li a:hover {
   .intro div svg {
     width: 100%;
     width: 336px;
+  }
+  .card-wrapper {
+    height: 70vh;
+  }
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 0px;
+  }
+  .card {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+  .card:not(:first-child) {
+    margin-top: -6rem;
+  }
+  .card:hover,
+  .card:active {
+    -webkit-transform: rotate(-3deg) translateX(-3rem) translateY(-3rem);
+            transform: rotate(-3deg) translateX(-3rem) translateY(-3rem);
+  }
+  .card:hover ~ .card {
+    -webkit-transform: rotate(-3deg) translateY(4rem);
+            transform: rotate(-3deg) translateY(4rem);
+  }
+  .app-picture {
+    clip: rect(0, 100px, 200px, 0);
+  }
+  .app-picture img {
+    height: 100%;
+    content: url(../images/horiseon-mobile.png);
   }
 }
 
