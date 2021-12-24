@@ -139,7 +139,7 @@ header {
 }
 
 header h1 {
-  font-size: 36px;
+  font-size: 1.8rem;
   max-width: 100%;
   padding: 10px 15px;
   border-radius: 15px;
@@ -168,7 +168,7 @@ header nav ul {
 header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
-  font-size: 4.36vh;
+  font-size: 1rem;
   text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
   border-radius: 15px;
   transition: 0.18s;
