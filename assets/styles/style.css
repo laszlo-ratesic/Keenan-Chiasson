@@ -515,6 +515,15 @@ header nav ul li a:hover {
   .intro div svg:hover {
     height: 336px;
   }
+  .intro-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .section-title {
     width: 80%;
   }
@@ -530,15 +539,6 @@ header nav ul li a:hover {
   }
   header nav ul li a {
     width: 100%;
-  }
-  .intro-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .intro div svg {
     width: 100%;

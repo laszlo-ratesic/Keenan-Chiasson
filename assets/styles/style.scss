@@ -474,6 +474,11 @@ $line-height: $clip-height - 5px;
     height: 336px;
   }
 
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .section-title {
     width: 80%;
   }
@@ -493,10 +498,6 @@ $line-height: $clip-height - 5px;
     width: 100%;
   }
 
-  .intro-container {
-    flex-direction: column;
-    align-items: center;
-  }
 
   .intro div svg {
     width: 100%;
