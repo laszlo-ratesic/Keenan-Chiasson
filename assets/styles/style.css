@@ -367,7 +367,7 @@ header nav ul li a:hover {
   display: grid;
   place-items: center;
   overflow: visible;
-  height: 100vh;
+  height: 50vh;
 }
 
 .cards {
@@ -376,7 +376,7 @@ header nav ul li a:hover {
   display: flex;
   position: relative;
   height: 450px;
-  width: 400px;
+  width: 330px;
   left: -220px;
 }
 
@@ -526,6 +526,46 @@ header nav ul li a:hover {
   }
   .section-title {
     width: 80%;
+    margin-bottom: 1vh;
+  }
+  .card-wrapper {
+    margin: 0 auto;
+    height: 70vh;
+  }
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 0px;
+  }
+  .card:first-child {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .card {
+    -webkit-transform: skewY(0deg);
+            transform: skewY(0deg);
+  }
+  .card:not(:first-child) {
+    margin-top: -6rem;
+  }
+  .card:hover,
+  .card:active {
+    -webkit-transform: rotate(3deg) translateX(3rem) translateY(-3rem) scale(1.18);
+            transform: rotate(3deg) translateX(3rem) translateY(-3rem) scale(1.18);
+  }
+  .card:hover ~ .card,
+  .card:active ~ .card {
+    -webkit-transform: rotate(-3deg) translateY(4rem) translateX(-2rem);
+            transform: rotate(-3deg) translateY(4rem) translateX(-2rem);
+  }
+  .app-picture {
+    clip: rect(0, 100px, 200px, 0);
+  }
+  .app-picture img {
+    height: 100%;
+    content: url(../images/horiseon-mobile.png);
   }
 }
 
@@ -543,39 +583,6 @@ header nav ul li a:hover {
   .intro div svg {
     width: 100%;
     width: 336px;
-  }
-  .card-wrapper {
-    height: 70vh;
-  }
-  .cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    left: 0px;
-  }
-  .card {
-    -webkit-transform: skewY(0deg);
-            transform: skewY(0deg);
-  }
-  .card:not(:first-child) {
-    margin-top: -6rem;
-  }
-  .card:hover,
-  .card:active {
-    -webkit-transform: rotate(-3deg) translateX(-3rem) translateY(-3rem);
-            transform: rotate(-3deg) translateX(-3rem) translateY(-3rem);
-  }
-  .card:hover ~ .card {
-    -webkit-transform: rotate(-3deg) translateY(4rem);
-            transform: rotate(-3deg) translateY(4rem);
-  }
-  .app-picture {
-    clip: rect(0, 100px, 200px, 0);
-  }
-  .app-picture img {
-    height: 100%;
-    content: url(../images/horiseon-mobile.png);
   }
 }
 

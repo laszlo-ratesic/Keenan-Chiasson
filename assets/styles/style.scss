@@ -336,14 +336,14 @@ $line-height: $clip-height - 5px;
   display: grid;
   place-items: center;
   overflow: visible;
-  height: 100vh;
+  height: 50vh;
 }
 
 .cards {
   display: flex;
   position: relative;
   height: 450px;
-  width: 400px;
+  width: 330px;
   left: -220px;
 }
 
@@ -481,6 +481,48 @@ $line-height: $clip-height - 5px;
 
   .section-title {
     width: 80%;
+    margin-bottom: 1vh;
+  }
+
+  .card-wrapper {
+    margin: 0 auto;
+    height: 70vh;
+  }
+
+  .cards {
+    flex-direction: column;
+    left: 0px;
+  }
+
+  .card:first-child {
+    align-self: flex-end
+  }
+
+  .card {
+    transform: skewY(0deg);
+  }
+
+  .card:not(:first-child) {
+    margin-top: -6rem;
+  }
+
+  .card:hover,
+  .card:active {
+    transform: rotate(3deg) translateX(3rem) translateY(-3rem) scale(1.18);
+  }
+
+  .card:hover ~ .card,
+  .card:active ~ .card {
+    transform: rotate(-3deg) translateY(4rem) translateX(-2rem);
+  }
+
+  .app-picture {
+    clip: rect(0, 100px, 200px, 0);
+  }
+
+  .app-picture img {
+    height: 100%;
+    content: url(../images/horiseon-mobile.png);
   }
 }
 
@@ -504,40 +546,6 @@ $line-height: $clip-height - 5px;
     width: 336px;
   }
 
-  .card-wrapper {
-    height: 70vh;
-  }
-
-  .cards {
-    flex-direction: column;
-    left: 0px;
-  }
-
-  .card {
-    transform: skewY(0deg);
-  }
-
-  .card:not(:first-child) {
-    margin-top: -6rem;
-  }
-
-  .card:hover,
-  .card:active {
-    transform: rotate(-3deg) translateX(-3rem) translateY(-3rem);
-  }
-
-  .card:hover ~ .card {
-    transform: rotate(-3deg) translateY(4rem);
-  }
-
-  .app-picture {
-    clip: rect(0, 100px, 200px, 0);
-  }
-
-  .app-picture img {
-    height: 100%;
-    content: url(../images/horiseon-mobile.png);
-  }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
