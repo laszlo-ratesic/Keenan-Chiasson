@@ -95,3 +95,7 @@ $line-height: $clip-height - 5px;
     transform: translate3d(0, 0, 0);
   }
 }
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+}
