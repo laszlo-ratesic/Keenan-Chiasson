@@ -194,7 +194,7 @@ header nav ul li a:hover {
 }
 
 .container {
-  margin: 50vh auto;
+  margin: 0vh auto;
   min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
