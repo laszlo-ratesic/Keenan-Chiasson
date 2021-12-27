@@ -190,97 +190,7 @@ header nav ul li a:hover {
   text-shadow: none;
 }
 
-
-
-// SKEWED NAME TEXT
-
-// Copyright (c) 2021 by James Bosworth (https://codepen.io/bosworthco/pen/YWBLpR)
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-$total-lines: 6;
-$left-offset: 29px;
-$clip-height: 50px;
-$line-height: $clip-height - 5px;
-
-.container {
-  margin: 0vh auto;
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
-  right: 200px;
-}
-
-.words {
-  padding: 80px 0;
-  font-size: 68px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  text-transform: uppercase;
-  // Sort out nasty text fuzz
-  transform: translate3d(0, 0, 0);
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-kerning: normal;
-  -webkit-text-size-adjust: 100%;
-}
-
-/*
-** Apply common styles to each line of text
-*/
-.word-line {
-  height: $clip-height;
-  overflow: hidden;
-  position: relative;
-
-  // Change the perspective of each alternating line
-  &:nth-child(odd) {
-    transform: skew(60deg, -30deg) scaleY(0.66667);
-  }
-  &:nth-child(even) {
-    transform: skew(0deg, -30deg) scaleY(1.33333);
-  }
-
-  // Loop over the total lines and apply a left offset
-  @for $i from 1 through $total-lines + 1 {
-    &:nth-child(#{$i}) {
-      left: $left-offset * $i;
-    }
-  }
-}
-
-/*
-** Fine-grained text styles
-*/
-.word-line p {
-  height: $clip-height;
-  line-height: $line-height;
-  padding: 0 10px;
-  transition: all 0.4s ease-in-out;
-  transform: translate3d(0, 0, 0);
-  vertical-align: top;
-  white-space: nowrap;
-}
-
-/*
-** The hover interaction
-*/
-.words:hover {
-  p {
-    transform: translate3d(0, -($clip-height), 0);
-  }
-  color: var(--secondary-color);
-}
-
-// END OF SKEWED NAME TEXT
-
-// SECTION TITLE STYLES
+// SECTION STYLES
 .section-title {
   font-size: 48px;
   padding-bottom: 20px;
@@ -300,6 +210,7 @@ $line-height: $clip-height - 5px;
 
 .intro div {
   position: relative;
+  z-index: 2;
 }
 
 .intro div svg {
@@ -331,6 +242,11 @@ $line-height: $clip-height - 5px;
 }
 
 // WHAT I DO SECTION
+#what-i-do div,
+h2 {
+  z-index: 3;
+}
+
 .card-wrapper {
   margin: 36px;
   display: grid;
@@ -357,7 +273,10 @@ $line-height: $clip-height - 5px;
   transition: 0.2s;
   display: flex;
   flex-direction: column;
-  transform: skewY(-25deg);
+  transform: skewY(-25deg), translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
 }
 
 .app-picture {
@@ -370,6 +289,10 @@ $line-height: $clip-height - 5px;
   border-radius: 20px 20px 10px 10px;
   border: 2px solid black;
   opacity: 1;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
 }
 
 .card h2 {
@@ -495,7 +418,7 @@ $line-height: $clip-height - 5px;
   }
 
   .card:first-child {
-    align-self: flex-end
+    align-self: flex-end;
   }
 
   .card {
@@ -532,7 +455,7 @@ $line-height: $clip-height - 5px;
     display: none;
   }
 
-  header nav{
+  header nav {
     width: 100%;
   }
 
@@ -540,12 +463,10 @@ $line-height: $clip-height - 5px;
     width: 100%;
   }
 
-
   .intro div svg {
     width: 100%;
     width: 336px;
   }
-
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
