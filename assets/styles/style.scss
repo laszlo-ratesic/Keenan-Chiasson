@@ -277,6 +277,7 @@ h2 {
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .app-picture {
@@ -292,6 +293,7 @@ h2 {
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .card h2 {
@@ -320,13 +322,21 @@ h2 {
 
 .card:hover,
 .card:active {
-  transform: translateY(-7rem);
+  transform: translate3d(0, -7rem, 0);
   background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
   animation: gradient 3s ease alternate infinite;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .card:hover ~ .card {
-  transform: skewY(-15deg) translateX(4rem);
+  transform: skewY(-15deg) translate3d(4rem, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .shape_shadow {
@@ -339,6 +349,31 @@ h2 {
   border-radius: 30px;
   z-index: -10;
 }
+// END OF CARDS
+
+// CONTACT SECTION
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 10%;
+  align-items: center;
+}
+
+.contact div {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.contact div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
 
 // UTILITIES
 

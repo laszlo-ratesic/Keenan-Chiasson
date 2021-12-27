@@ -301,6 +301,7 @@ h2 {
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .app-picture {
@@ -316,6 +317,7 @@ h2 {
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .card h2 {
@@ -346,16 +348,24 @@ h2 {
 
 .card:hover,
 .card:active {
-  -webkit-transform: translateY(-7rem);
-          transform: translateY(-7rem);
+  -webkit-transform: translate3d(0, -7rem, 0);
+          transform: translate3d(0, -7rem, 0);
   background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
   -webkit-animation: gradient 3s ease alternate infinite;
           animation: gradient 3s ease alternate infinite;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .card:hover ~ .card {
-  -webkit-transform: skewY(-15deg) translateX(4rem);
-          transform: skewY(-15deg) translateX(4rem);
+  -webkit-transform: skewY(-15deg) translate3d(4rem, 0, 0);
+          transform: skewY(-15deg) translate3d(4rem, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
 }
 
 .shape_shadow {
@@ -367,6 +377,44 @@ h2 {
   height: 550px;
   border-radius: 30px;
   z-index: -10;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 24px;
+}
+
+.contact div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .flex-row {
