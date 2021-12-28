@@ -261,9 +261,16 @@ h2 {
 
 // FOOTER
 footer {
+  overflow: hidden;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
-  font-size: 3em;
+  justify-content: flex-end;
+  font-family: 'Roslindale Variable', serif;
+  font-size: 169px;
+  font-weight: bolder;
+  font-style: italic;
+  z-index: -1;
 }
 
 // UTILITIES
@@ -271,3 +278,6 @@ footer {
 .flex-row {
   display: flex;
 }
+
+
+
