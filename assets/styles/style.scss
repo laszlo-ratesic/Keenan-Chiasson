@@ -249,8 +249,8 @@ h2 {
 
 .card-wrapper {
   margin: 36px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: flex-start;
   overflow: visible;
   height: 50vh;
 }
@@ -260,7 +260,7 @@ h2 {
   position: relative;
   height: 450px;
   width: 330px;
-  left: calc(50% - 67vw);
+  left: 25vw;
 }
 
 .card {
@@ -273,7 +273,7 @@ h2 {
   transition: .4s ease;
   display: flex;
   flex-direction: column;
-  transform: skewY(-25deg);
+  transform: skewY(-15deg);
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
@@ -318,7 +318,7 @@ h2 {
 }
 
 .card:not(:first-child) {
-  margin-left: -4rem;
+  margin-left: -16rem;
 }
 
 .card:hover,
