@@ -1,22 +1,27 @@
-:root[theme="light"] {
-  --primary-color: white;
-  --secondary-color: black;
-  --primary-gradient: linear-gradient(
-    311deg,
-    #ffd452,
-    #544a7d,
-    #0575e6,
-    #00f260,
-    #1a2a6c,
-    #b21f1f,
-    #fdbb2d
-  );
-}
-
 :root[theme="dark"] {
   --primary-color: black;
   --secondary-color: white;
 }
+
+:root[theme="light"] {
+  --primary-color: white;
+  --secondary-color: black;
+}
+
+$primary-gradient: linear-gradient(
+  311deg,
+  #ffd452,
+  #544a7d,
+  #0575e6,
+  #00f260,
+  #1a2a6c,
+  #b21f1f,
+  #fdbb2d
+);
+
+$smooth-gradient: gradient 24s ease-in-out infinite;
+$alternate-gradient: gradient 24s ease-in-out alternate infinite;
+$wobble-animation: wobble 10s ease-in-out alternate infinite;
 
 html {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
@@ -26,12 +31,12 @@ html {
 // GRADIENT BACKGROUND
 
 body {
-  background: var(--primary-gradient);
+  background: $primary-gradient;
   background-size: 1400% 1400%;
   color: var(--primary-color);
-  -webkit-animation: gradient 24s ease-in-out infinite;
-  -moz-animation: gradient 24s ease-in-out infinite;
-  animation: gradient 24s ease-in-out alternate infinite;
+  -webkit-animation: $alternate-gradient;
+  -moz-animation: $alternate-gradient;
+  animation: $alternate-gradient;
 }
 
 @-webkit-keyframes gradient {
@@ -94,35 +99,35 @@ body {
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
-}
 
-.title-wrapper h1 {
-  text-align: center;
-  font-size: 64px;
-  text-transform: uppercase;
-  font-weight: 900;
+  h1 {
+    text-align: center;
+    font-size: 64px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
 }
 
 .container-solid .title-wrapper h1 {
-  background-image: var(--primary-gradient);
+  background-image: $primary-gradient;
   background-size: 1400% 1400%;
   background-position: center;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: gradient 24s ease-in-out infinite;
+  animation: $smooth-gradient;
 }
 
 .container-image {
   background-size: 1400% 1400%;
   background-position: center;
   background-attachment: fixed;
-  animation: gradient 24s ease-in-out infinite;
+  animation: $smooth-gradient;
   top: 100vh;
-}
 
-.container-image .title-wrapper h1 {
-  color: var(--primary-color);
+  .title-wrapper h1 {
+    color: var(--primary-color);
+  }
 }
 // END OF COVER
 
@@ -137,59 +142,60 @@ header {
   position: -webkit-sticky;
   top: 0;
   z-index: 9999;
+
+  h1 {
+    font-size: 1.8rem;
+    max-width: 100%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: 0.18s;
+
+    &:hover {
+      background-color: var(--primary-color);
+
+      a {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  nav {
+    width: 36%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      list-style: none;
+
+      li a {
+        padding: 10px 15px;
+        font-weight: lighter;
+        font-size: 1rem;
+        text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
+        border-radius: 15px;
+        transition: 0.18s;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+
+        &:hover {
+          background-color: var(--secondary-color);
+          color: var(--primary-color);
+          text-shadow: none;
+        }
+      }
+    }
+  }
 }
 
-header h1 {
-  font-size: 1.8rem;
-  max-width: 100%;
-  padding: 10px 15px;
-  border-radius: 15px;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  transition: 0.18s;
-}
-
-header a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-header nav {
-  width: 36%;
-}
-
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  list-style: none;
-}
-
-header nav ul li a {
-  padding: 10px 15px;
-  font-weight: lighter;
-  font-size: 1rem;
-  text-shadow: 0 0 5px rgba(var(--secondary-color), 0.5);
-  border-radius: 15px;
-  transition: 0.18s;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-header h1:hover {
-  background-color: var(--primary-color);
-}
-
-header h1:hover a {
-  color: var(--secondary-color);
-}
-
-header nav ul li a:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  text-shadow: none;
-}
 // END OF HEADER
 
 // SECTION STYLES
@@ -203,36 +209,38 @@ header nav ul li a:hover {
 }
 
 // WHO I AM SECTION
-.intro p {
-  line-height: 1.7;
-  font-size: 26px;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
+.intro {
+  p {
+    line-height: 1.7;
+    font-size: 26px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-.intro div {
-  position: relative;
-  z-index: 2;
-}
+  div {
+    position: relative;
+    z-index: 2;
 
-.intro div svg {
-  margin: 20px 0 20px 150px;
-  max-width: 100%;
-  min-width: 100px;
-  border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
-  filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%)
-    drop-shadow(15px -15px 0);
-  transition: 1080ms all;
-  animation: wobble 15s ease-in-out alternate infinite;
-  shape-outside: border-box;
-}
+    svg {
+      margin: 20px 0 20px 150px;
+      max-width: 100%;
+      min-width: 100px;
+      border-radius: 77% 23% 61% 39% / 46% 30% 70% 54%;
+      filter: brightness(100%) saturate(100%) opacity(70%) contrast(4000%)
+        drop-shadow(15px -15px 0);
+      transition: 1080ms all;
+      animation: $wobble-animation;
+      shape-outside: border-box;
 
-.intro div svg:hover,
-.intro div svg:active {
-  filter: none;
-  animation: wobble 5s ease-in-out alternate infinite;
-  width: 336px;
+      &:hover,
+      &:active {
+        filter: none;
+        width: 336px;
+      }
+    }
+  }
+
 }
 
 @keyframes wobble {
