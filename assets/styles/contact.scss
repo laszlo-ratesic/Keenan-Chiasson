@@ -32,18 +32,19 @@
       svg {
         overflow: visible;
 
+        &:hover path,
+        &:active path {
+          stroke: #000000;
+          stroke-width: 0.5px;
+          stroke-linejoin: round;
+          animation: draw 4s ease-in alternate infinite;
+        }
+        
         path {
           fill: white;
           stroke-dasharray: 500;
           stroke-dashoffset: 500;
         }
-      }
-      svg:hover path,
-      svg:active path {
-        stroke: #000000;
-        stroke-width: 0.5px;
-        stroke-linejoin: round;
-        animation: draw 4s ease-in alternate infinite;
       }
     }
   }

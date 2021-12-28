@@ -32,16 +32,41 @@
   -webkit-text-size-adjust: 100%;
   font-kerning: normal;
 
-    h2 {
-      margin-block-start: 0.83em;
-      margin-block-end: 0.83em;
-      padding: 0px 30px;
-      max-height: 25px;
-    }
+  &:not(:first-child) {
+    margin-left: -16rem;
+  }
 
-    p {
-      padding: 20px 30px;
-    }
+  &:hover,
+  &:active {
+    transform: rotate(-4deg) skewY(-1deg) translate3d(-1rem, -8rem, 0)
+      scale(1.3);
+    background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
+    animation: gradient 3s ease alternate infinite;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+    font-kerning: normal;
+  }
+
+  &:hover ~ .card,
+  &:active ~ .card {
+    transform: skewY(5deg) rotate(15deg) translate3d(14rem, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+    font-kerning: normal;
+  }
+
+  h2 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    padding: 0px 30px;
+    max-height: 25px;
+  }
+
+  p {
+    padding: 20px 30px;
+  }
 }
 
 .app-picture {
@@ -61,7 +86,6 @@
   }
 }
 
-
 .text {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -69,29 +93,5 @@
   line-height: 30px;
   letter-spacing: 0.5px;
   color: var(--primary-color);
-}
-
-.card:not(:first-child) {
-  margin-left: -16rem;
-}
-
-.card:hover,
-.card:active {
-  transform: rotate(-4deg) skewY(-1deg) translate3d(-1rem, -8rem, 0) scale(1.3);
-  background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
-  animation: gradient 3s ease alternate infinite;
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-kerning: normal;
-  -webkit-text-size-adjust: 100%;
-  font-kerning: normal;
-}
-
-.card:hover ~ .card,
-.card:active ~ .card {
-  transform: skewY(5deg) rotate(15deg) translate3d(14rem, 0, 0);
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-kerning: normal;
-  -webkit-text-size-adjust: 100%;
-  font-kerning: normal;
 }
 // END OF CARDS
