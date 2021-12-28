@@ -259,8 +259,8 @@ h2 {
   display: flex;
   position: relative;
   height: 450px;
-  width: 330px;
-  left: 25vw;
+  width: 100%;
+  justify-content: center;
 }
 
 .card {
