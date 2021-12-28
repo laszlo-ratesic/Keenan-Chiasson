@@ -37,9 +37,9 @@
           stroke: #000000;
           stroke-width: 0.5px;
           stroke-linejoin: round;
-          animation: draw 4s ease-in alternate infinite;
+          animation: draw 3s ease-in alternate infinite;
         }
-        
+
         path {
           fill: white;
           stroke-dasharray: 500;
@@ -66,6 +66,9 @@
   0% {
     stroke-dashoffset: 500;
   }
+  50% {
+    fill: black;
+  }
   100% {
     stroke-dashoffset: 0;
   }
@@ -74,6 +77,9 @@
 @-moz-keyframes draw {
   0% {
     stroke-dashoffset: 500;
+  }
+  50% {
+    fill: black;
   }
   100% {
     stroke-dashoffset: 0;
