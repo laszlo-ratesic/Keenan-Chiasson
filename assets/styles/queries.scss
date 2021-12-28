@@ -41,10 +41,10 @@
       margin: 2vh auto;
       width: 336px;
       height: 230px;
-    }
 
-    svg:hover {
-      height: 336px;
+      &:hover {
+        height: 336px;
+      }
     }
   }
 
@@ -74,27 +74,27 @@
     left: 0px;
   }
 
-  .card:first-child {
-    align-self: flex-end;
-  }
-
   .card {
     transform: skewY(0deg);
-  }
 
-  .card:not(:first-child) {
-    margin-top: -6rem;
-    margin-left: 0rem;
-  }
+    &:first-child {
+      align-self: flex-end;
+    }
 
-  .card:hover,
-  .card:active {
-    transform: rotate(5deg) translateX(5rem) translateY(-3rem) scale(1.3);
-  }
+    &:not(:first-child) {
+      margin-top: -6rem;
+      margin-left: 0rem;
+    }
 
-  .card:hover ~ .card,
-  .card:active ~ .card {
-    transform: rotate(-13deg) translateY(3rem) translateX(-12rem);
+    &:hover,
+    &:active {
+      transform: rotate(5deg) translateX(5rem) translateY(-3rem) scale(1.3);
+    }
+
+    &:hover ~ .card,
+    &:active ~ .card {
+      transform: rotate(-13deg) translateY(3rem) translateX(-12rem);
+    }
   }
 
   .app-picture {
