@@ -323,7 +323,7 @@ h2 {
 
 .card:hover,
 .card:active {
-  transform: translate3d(0, -7rem, 0);
+  transform: rotate(-8deg) skewY(-5deg) translate3d(0, -7rem, 0);
   background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
   animation: gradient 3s ease alternate infinite;
   -webkit-font-smoothing: antialiased;
@@ -332,8 +332,9 @@ h2 {
   font-kerning: normal;
 }
 
-.card:hover ~ .card {
-  transform: skewY(-15deg) translate3d(4rem, 0, 0);
+.card:hover ~ .card,
+.card:active ~ .card {
+  transform: skewY(5deg) rotate(15deg) translate3d(14rem, 0, 0);
   -webkit-font-smoothing: antialiased;
   -webkit-font-kerning: normal;
   -webkit-text-size-adjust: 100%;
