@@ -124,6 +124,7 @@ body {
 .container-image .title-wrapper h1 {
   color: var(--primary-color);
 }
+// END OF COVER
 
 // HEADER
 header {
@@ -189,6 +190,7 @@ header nav ul li a:hover {
   color: var(--primary-color);
   text-shadow: none;
 }
+// END OF HEADER
 
 // SECTION STYLES
 .section-title {
@@ -240,6 +242,7 @@ header nav ul li a:hover {
     border-radius: 31% 69% 20% 80% / 24% 31% 69% 76%;
   }
 }
+// END OF WHO I AM SECTION
 
 // WHAT I DO SECTION
 #what-i-do div,
@@ -268,6 +271,8 @@ h2 {
   padding-left: 24px;
   padding-right: 24px;
 }
+
+// FOOTER
 
 // UTILITIES
 
