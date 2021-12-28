@@ -1,0 +1,134 @@
+.card-wrapper {
+  margin: 122px 0 163px 0;
+  display: flex;
+  justify-content: flex-start;
+  overflow: visible;
+  height: 50vh;
+}
+
+.cards {
+  display: flex;
+  position: relative;
+  height: 450px;
+  width: 100%;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(#6980c0, 0.5);
+  background-size: 800%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: 4px 4px 15px 2px rgba(var(--primary-color), 0.7);
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  transform: skewY(-15deg);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+.app-picture {
+  height: 100%;
+  opacity: 1;
+}
+
+.app-picture img {
+  content: url(https://unsplash.it/400/290);
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 20px 20px 10px 10px;
+  opacity: 0.8;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+.card h2 {
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  padding: 0px 30px;
+  max-height: 25px;
+}
+
+.card p {
+  padding: 20px 30px;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+}
+
+.card:not(:first-child) {
+  margin-left: -16rem;
+}
+
+.card:first-of-type:hover,
+.card:active {
+  transform: rotate(-4deg) skewY(-1deg) translate3d(-1rem, -8rem, 0);
+  background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
+  animation: gradient 3s ease alternate infinite;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+.card:nth-of-type(2):hover {
+  transform: rotate(-2deg) skewY(-1deg) translate3d(0, -9rem, 0);
+  background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
+  animation: gradient 3s ease alternate infinite;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+.card:nth-of-type(3):hover {
+  transform: rotate(0deg) skewY(0deg) translate3d(3rem, -10rem, 0);
+  background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
+  animation: gradient 3s ease alternate infinite;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+.card:nth-of-type(4):hover {
+  transform: rotate(2deg) skewY(1deg) translate3d(5rem, -10rem, 0);
+  background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
+  animation: gradient 3s ease alternate infinite;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+.card:last-of-type:hover {
+  transform: rotate(4deg) skewY(1deg) translate3d(3rem, -10rem, 0);
+  background-image: linear-gradient(331deg, #6980c0, #2146ac, #d8cb12);
+  animation: gradient 3s ease alternate infinite;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+.card:hover ~ .card,
+.card:active ~ .card {
+  transform: skewY(5deg) rotate(15deg) translate3d(14rem, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+// END OF CARDS
