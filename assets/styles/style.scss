@@ -24,7 +24,7 @@ $alternate-gradient: gradient 24s ease-in-out alternate infinite;
 $wobble-animation: wobble 10s ease-in-out alternate infinite;
 
 html {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-family: "Roslindale Variable", serif;
   scroll-behavior: smooth;
 }
 
@@ -105,10 +105,13 @@ body {
     font-size: 64px;
     text-transform: uppercase;
     font-weight: 900;
+    letter-spacing: .1em;
   }
 }
 
 .container-solid .title-wrapper h1 {
+  font-style: bold;
+  font-weight: 600;
   background-image: $primary-gradient;
   background-size: 1400% 1400%;
   background-position: center;
@@ -127,6 +130,8 @@ body {
 
   .title-wrapper h1 {
     color: var(--primary-color);
+    font-style: bold;
+    font-weight: 600;
   }
 }
 // END OF COVER
@@ -268,10 +273,11 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   font-family: 'Roslindale Variable', serif;
-  font-size: 169px;
+  font-size: 113px;
   font-weight: bolder;
   font-style: italic;
   z-index: -1;
+  letter-spacing: .01em;
 }
 
 // UTILITIES

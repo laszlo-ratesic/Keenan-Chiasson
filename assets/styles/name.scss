@@ -10,8 +10,8 @@
 
 $total-lines: 6;
 $left-offset: 29px;
-$clip-height: 50px;
-$line-height: $clip-height - 5px;
+$clip-height: 85px;
+$line-height: $clip-height + 5px;
 
 .container {
   margin: 0 auto;
@@ -78,11 +78,21 @@ $line-height: $clip-height - 5px;
   vertical-align: top;
   white-space: nowrap;
   z-index: -99;
+  color: rgba(22, 17, 17, 0.72);
+  letter-spacing: .03em;
 }
 
-.words p {
-  color: var(--secondary-color);
-  opacity: .5;
+#first-name-el {
+  letter-spacing: .1em;
+}
+
+#last-name-el {
+  letter-spacing: .09em;
+}
+
+#web-el {
+  text-align: right;
+  letter-spacing: .18em;
 }
 
 @keyframes float {
