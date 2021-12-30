@@ -165,7 +165,7 @@
       transform: rotate(4deg) translateX(5rem) translateY(5rem);
     }
 
-    &:nth-child(3){
+    &:nth-child(3) {
       transform: rotate(-3deg) translateX(-5rem) translateY(10rem);
     }
     &:nth-child(4) {
@@ -183,6 +183,14 @@
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+  html, body {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
   header {
     padding: 0px;
 
@@ -204,31 +212,41 @@
   }
 
   .section-title {
+    position: relative;
     width: 95%;
   }
 
   .intro p {
-    width: 100%;
+    width: 80%;
+    margin-bottom: 1rem;
   }
   .container {
     align-items: flex-start;
   }
 
-  .words {
+  #what-i-do {
+    position: relative;
+    top: 40rem;
     width: 100%;
-    overflow: hidden;
   }
 
-  .word-line {
-    width: 80%;
+  .words {
+    transform: translateX(-5rem);
   }
 
-  .word-line p {
-    overflow: visible;
+  .card-wrapper {
+    margin: 0 auto 72em auto;
+    position: relative;
+    top: -10rem;
   }
 
-  .card > * {
-    overflow: hidden;
+  .card {
+    margin-top: 1rem;
+  }
+
+  .cards {
+    height: 178%;
+    transform: scale(0.7)
   }
 
   .card {
@@ -240,7 +258,7 @@
       transform: rotate(4deg) translateX(2rem) translateY(5rem);
     }
 
-    &:nth-child(3){
+    &:nth-child(3) {
       transform: rotate(-3deg) translateX(-2rem) translateY(10rem);
     }
     &:nth-child(4) {
