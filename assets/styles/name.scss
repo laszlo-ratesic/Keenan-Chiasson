@@ -69,6 +69,16 @@ $line-height: $clip-height + 5px;
 /*
 ** Fine-grained text styles
 */
+
+.word-line {
+  overflow: hidden;
+}
+
+// screen-break fix
+.word-line:nth-child(7) {
+  left: 186px;
+}
+
 .word-line p {
   height: $clip-height;
   line-height: $line-height;
@@ -80,10 +90,11 @@ $line-height: $clip-height + 5px;
   z-index: -99;
   color: rgba(22, 17, 17, 0.72);
   letter-spacing: .03em;
+  overflow: hidden;
 }
 
 #first-name-el {
-  letter-spacing: .1em;
+  letter-spacing: .19em;
 }
 
 #last-name-el {
