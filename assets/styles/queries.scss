@@ -31,16 +31,16 @@
   }
 
   .word-line p {
-      min-width: 40%;
-    }
+    min-width: 40%;
+  }
 
-    .word-line {
-      overflow: hidden;
-    }
+  .word-line {
+    overflow: hidden;
+  }
 
-    .word-line:nth-child(7) {
-      left: 186px;
-    }
+  .word-line:nth-child(7) {
+    left: 186px;
+  }
 
   .intro div {
     justify-content: space-evenly;
@@ -55,8 +55,6 @@
       }
     }
   }
-
-
 
   .intro-container {
     flex-direction: column;
@@ -98,6 +96,14 @@
       margin-left: 0rem;
     }
 
+    &:nth-child(odd) {
+      transform: rotate(-3deg) translateX(-10rem);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(4deg) translateX(10rem);
+    }
+
     &:hover,
     &:active {
       transform: rotate(5deg) translateX(5rem) translateY(-3rem) scale(1.3);
@@ -120,7 +126,10 @@
       height: 100%;
     }
   }
-
+  .contact {
+    padding: 0 10%;
+    margin-bottom: 42px;
+  }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -142,6 +151,33 @@
   .intro div svg {
     width: 100%;
     width: 336px;
+  }
+  .card-wrapper {
+    margin: 19em auto 40em auto;
+  }
+
+  .card {
+    &:nth-child(odd) {
+      transform: rotate(-3deg) translateX(-5rem);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(4deg) translateX(5rem) translateY(5rem);
+    }
+
+    &:nth-child(3){
+      transform: rotate(-3deg) translateX(-5rem) translateY(10rem);
+    }
+    &:nth-child(4) {
+      transform: rotate(4deg) translateX(5rem) translateY(15rem);
+    }
+    &:nth-child(5) {
+      transform: rotate(-3deg) translateX(-5rem) translateY(20rem);
+    }
+  }
+  .contact {
+    padding: 0 10%;
+    margin-bottom: 42px;
   }
 }
 
@@ -175,20 +211,52 @@
     width: 100%;
   }
   .container {
-    right: 48px;
-    top: -136px;
     align-items: flex-start;
   }
 
   .words {
-    margin: 0;
     width: 100%;
     overflow: hidden;
   }
 
+  .word-line {
+    width: 80%;
+  }
+
   .word-line p {
-    max-width: 70%;
-    min-width: 45%;
+    overflow: visible;
+  }
+
+  .card > * {
     overflow: hidden;
+  }
+
+  .card {
+    &:nth-child(odd) {
+      transform: rotate(-3deg) translateX(-2rem);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(4deg) translateX(2rem) translateY(5rem);
+    }
+
+    &:nth-child(3){
+      transform: rotate(-3deg) translateX(-2rem) translateY(10rem);
+    }
+    &:nth-child(4) {
+      transform: rotate(4deg) translateX(2rem) translateY(15rem);
+    }
+    &:nth-child(5) {
+      transform: rotate(-3deg) translateX(-2rem) translateY(20rem);
+    }
+    &:hover,
+    &:active {
+      transform: rotate(5deg) translateY(-3rem) scale(1.3);
+    }
+
+    &:hover ~ .card,
+    &:active ~ .card {
+      transform: rotate(-13deg) translateY(3rem);
+    }
   }
 }
