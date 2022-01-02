@@ -89,16 +89,18 @@ $line-height: $clip-height + 5px;
   white-space: nowrap;
   z-index: -99;
   color: rgba(22, 17, 17, 0.72);
-  letter-spacing: .03em;
+  // letter-spacing: .03em;
   overflow: hidden;
 }
 
 #first-name-el {
-  letter-spacing: .19em;
+  letter-spacing: .018em;
+  text-align: end;
 }
 
 #last-name-el {
-  letter-spacing: .09em;
+  text-align: end;
+  letter-spacing: .018em;
 }
 
 #web-el {

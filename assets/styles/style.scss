@@ -13,7 +13,7 @@ $primary-gradient: linear-gradient(
   #ffd452,
   #544a7d,
   #0575e6,
-  #00f260,
+  #740847,
   #1a2a6c,
   #b21f1f,
   #fdbb2d
@@ -29,6 +29,13 @@ html {
 }
 
 // GRADIENT BACKGROUND
+@font-face {
+  src: url('../fonts/Roslindale-DisplayCondensedLight-Edu.woff2') format("woff2"),
+       url('../fonts/Roslindale-DisplayCondensedLight-Edu.woff') format("woff");
+  font-family: 'Roslindale';
+  font-style: normal;
+  font-weight: 300;
+}
 
 body {
   background: $primary-gradient;
@@ -37,6 +44,9 @@ body {
   -webkit-animation: $alternate-gradient;
   -moz-animation: $alternate-gradient;
   animation: $alternate-gradient;
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: 300;
 }
 
 @-webkit-keyframes gradient {
@@ -222,7 +232,7 @@ header {
 .intro {
   p {
     line-height: 1.7;
-    font-size: 26px;
+    font-size: 36px;
     width: 50%;
     margin: 0 10%;
     text-align: left;
@@ -250,7 +260,6 @@ header {
       }
     }
   }
-
 }
 
 @keyframes wobble {
@@ -265,9 +274,19 @@ header {
 // END OF WHO I AM SECTION
 
 // WHAT I DO SECTION
-#what-i-do div,
-h2 {
-  z-index: 3;
+#what-i-do {
+  position: relative;
+  top: 33rem;
+
+  div, h2 {
+    z-index: 3;
+  }
+}
+
+#where-to-reach-me {
+  position: relative;
+  top: 35rem;
+  margin-bottom: 36rem;
 }
 
 // FOOTER
@@ -290,6 +309,5 @@ footer {
 .flex-row {
   display: flex;
 }
-
 
 
