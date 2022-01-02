@@ -11,7 +11,7 @@
 .cards {
   display: flex;
   position: relative;
-  height: 450px;
+  height: 480px;
   width: 100%;
   justify-content: center;
 }
@@ -61,12 +61,14 @@
   h2 {
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
-    padding: 0px 30px;
+    padding: 0px 30px 20px 30px;
     max-height: 25px;
+    font-size: 23px;
+    margin-bottom: 0;
   }
 
   p {
-    padding: 20px 30px;
+    padding: 27px 30px;
   }
 }
 
@@ -75,8 +77,11 @@
   opacity: 1;
 
   img {
-    content: url(https://unsplash.it/400/290);
-    height: 100%;
+    // content: url(https://unsplash.it/400/290);
+    width: 400px;
+    height: 290px;
+    object-fit: cover;
+    object-position: 100% 0;
     border: 2px solid black;
     border-radius: 20px 20px 10px 10px;
     opacity: 0.8;
@@ -88,11 +93,11 @@
 }
 
 .text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 30px;
-  letter-spacing: 0.5px;
+  font-family: "Roslindale";
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 40px;
+  letter-spacing: 1.5px;
   color: var(--primary-color);
 }
 // END OF CARDS
