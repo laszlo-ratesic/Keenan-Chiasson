@@ -10,12 +10,15 @@ Throughout the creation of this project I learned a great deal about CSS and how
 I also began working heavily with SVG files and the CSS animation property as well as keyframes. The use of pseudo-elements and -selectors in conjunction with the transform property allowed for some pretty fun UX capabilities without the need for JavaScript, as seen with elements like my avatar, the app cards, and the svg icons in the contact section. I hope to continue my learning journey by learning more about SVG and animation used alongside JavaScript. 🚀
 
 ## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-- [Features](#features)
-- [Contribute](#contribute)
+- [Keenan Chiasson's Portfolio Page](#keenan-chiassons-portfolio-page)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Features](#features)
+  - [How to Contribute](#how-to-contribute)
 
 ## Installation
 Locate the dropdown menu labeled 'Code' to the left of the About section in the main page of this repository. From there, select your preferred cloning method from HTTPS, SSH, or the GitHub CLI. For this demonstration, we will be using the SSH method. Copy the link and head to your terminal. From the command line you should enter:
@@ -27,7 +30,7 @@ Replacing the above placeholder with the link copied from GitHub. This will clon
 ## Usage
 This code is strictly for use as Keenan Chiasson's Portfolio Page and is only provided as material for study and otherwise double-checking implementation of mobile-responsiveness and SCSS experimentation. Screenshots of original mockup are included.
 
-   ![Mockup of Keenan Chiasson's Portfolio Page.](./assets/images/mockup-screenshot.png)
+   ![Mockup of Keenan Chiasson's Portfolio Page.](./assets/images/mockup.gif)
 
 ## Credits
 UT Austin Coding Boot Camp https://techbootcamps.utexas.edu/coding/
